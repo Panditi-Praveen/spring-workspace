@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    <bean id="customer1" class="com.maven.spring.bean.Customer">-->
+
+<!--    </bean>-->
+<!--    <bean id="customer2" class="com.maven.spring.bean.Customer">-->
+<!--        <constructor-arg>-->
+<!--            <value>2</value>-->
+<!--        </constructor-arg>-->
+<!--        <constructor-arg>-->
+<!--            <value>customer2</value>-->
+<!--        </constructor-arg> <constructor-arg>-->
+<!--        <value>customer2@gmail.com</value>-->
+<!--    </constructor-arg> <constructor-arg>-->
+<!--        <value>8309957523</value>-->
+<!--    </constructor-arg>-->
+<!--    </bean>-->
+<!--    <bean id="customer3" class="com.maven.spring.bean.Customer">-->
+<!--        <constructor-arg index="0" type="int" value="3"/>-->
+<!--        <constructor-arg index="1" type="java.lang.String" value="customer3"/>-->
+<!--        <constructor-arg index="2" type="java.lang.String" value="customer3@gmail.com"/>-->
+<!--        <constructor-arg index="3" type="java.lang.String" value="1234567898"/>-->
+<!--    </bean>-->
+<!--&lt;!&ndash;    <bean id="customer4" class="com.maven.spring.bean.Customer">&ndash;&gt;-->
+<!--&lt;!&ndash;        <constructor-arg index="0" type="com.maven.spring.bean.Address" ref="shippingAddress"/>&ndash;&gt;-->
+
+<!--    </bean>-->
+    <bean id="customer5" class="com.maven.spring.bean.Customer">
+        <constructor-arg index="0" type="java.util.List">
+            <list>
+                <ref bean ="residentialAddress"/>
+                <ref bean="shippingAddress"/>
+            </list>
+        </constructor-arg>
+    </bean>
+    <bean id="shippingAddress" class="com.maven.spring.bean.Address">
+        <constructor-arg index="0" type="java.lang.String" value="jublie hills road no.05"/>
+        <constructor-arg index="1" type="java.lang.String" value="Hyderabad"/>
+    </bean>
+    <bean id="residentialAddress" class="com.maven.spring.bean.Address">
+        <constructor-arg index="0" type="java.lang.String" value="ayyappa society"/>
+        <constructor-arg index="1" type="java.lang.String" value="madhapur"/>
+    </bean>
+
+
+
+    <!-- more bean definitions go here -->
+
+</beans>
