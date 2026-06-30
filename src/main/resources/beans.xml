@@ -29,7 +29,7 @@
 <!--&lt;!&ndash;        <constructor-arg index="0" type="com.maven.spring.bean.Address" ref="shippingAddress"/>&ndash;&gt;-->
 
 <!--    </bean>-->
-    <bean id="customer5" class="com.maven.spring.bean.Customer" lazy-init="true">
+    <bean id="customer5" class="com.maven.spring.bean.Customer" lazy-init="true"  scope="prototype">
 <!--        <constructor-arg index="0" type="java.util.List">-->
 <!--            <list>-->
 <!--                <ref bean ="residentialAddress"/>-->
