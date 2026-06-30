@@ -29,19 +29,19 @@
 <!--&lt;!&ndash;        <constructor-arg index="0" type="com.maven.spring.bean.Address" ref="shippingAddress"/>&ndash;&gt;-->
 
 <!--    </bean>-->
-    <bean id="customer5" class="com.maven.spring.bean.Customer">
-        <constructor-arg index="0" type="java.util.List">
-            <list>
-                <ref bean ="residentialAddress"/>
-                <ref bean="shippingAddress"/>
-            </list>
-        </constructor-arg>
+    <bean id="customer5" class="com.maven.spring.bean.Customer" lazy-init="true">
+<!--        <constructor-arg index="0" type="java.util.List">-->
+<!--            <list>-->
+<!--                <ref bean ="residentialAddress"/>-->
+<!--                <ref bean="shippingAddress"/>-->
+<!--            </list>-->
+<!--        </constructor-arg>-->
     </bean>
-    <bean id="shippingAddress" class="com.maven.spring.bean.Address">
+    <bean id="shippingAddress" class="com.maven.spring.bean.Address" lazy-init="true">
         <constructor-arg index="0" type="java.lang.String" value="jublie hills road no.05"/>
         <constructor-arg index="1" type="java.lang.String" value="Hyderabad"/>
     </bean>
-    <bean id="residentialAddress" class="com.maven.spring.bean.Address">
+    <bean id="residentialAddress" class="com.maven.spring.bean.Address" lazy-init="true">
         <constructor-arg index="0" type="java.lang.String" value="ayyappa society"/>
         <constructor-arg index="1" type="java.lang.String" value="madhapur"/>
     </bean>
