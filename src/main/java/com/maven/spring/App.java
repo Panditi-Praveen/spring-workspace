@@ -25,9 +25,15 @@ public class App
         Address shippingAddress = context.getBean("shippingAddress",Address.class);
         System.out.println(shippingAddress);*/
 
-        Customer customer5 = context.getBean("customer5",Customer.class);
-        System.out.println(customer5);
+       /* Customer customer5 = context.getBean("customer5",Customer.class);
+       System.out.println(customer5);*/
 
+
+        Address shippingAddress =context.getBean("shippingAddress",Address.class);
+        System.out.println(shippingAddress);
+
+        Address residentialAddress = context.getBean("residentialAddress",Address.class);
+        System.out.println(residentialAddress);
 
     }
 }
